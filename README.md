@@ -16,7 +16,7 @@ Built with **Python**, **BeautifulSoup4**, and **Spotipy**.
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/yourusername/eska-rap-20-spotify-bot.git](https://github.com/yourusername/eska-rap-20-spotify-bot.git)
+    git clone [https://github.com/SzymLeg/spotify-bot-eska-rap-20.git](https://github.com/SzymLeg/spotify-bot-eska-rap-20.git)
     cd eska-rap-20-spotify-bot
     ```
 
