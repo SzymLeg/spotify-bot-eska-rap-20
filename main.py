@@ -14,7 +14,10 @@ SPOTIPY_CLIENT_ID = os.getenv("SPOTIPY_CLIENT_ID")
 SPOTIPY_CLIENT_SECRET = os.getenv("SPOTIPY_CLIENT_SECRET")
 SPOTIPY_REDIRECT_URI = os.getenv("SPOTIPY_REDIRECT_URI")
 SCOPE = "playlist-modify-public"
-locale.setlocale(locale.LC_TIME, 'Polish_Poland.1250')
+try:
+    locale.setlocale(locale.LC_TIME, 'Polish_Poland.1250')
+except locale.Error:
+    locale.setlocale(locale.LC_TIME, 'pl_PL.UTF-8')
 now = datetime.datetime.now()
 current_month = now.strftime('%B').capitalize()
 current_year = now.strftime('%Y')
