@@ -1,4 +1,4 @@
-# 🎵 Eska Rap 20 - Spotify Bot
+# 🎵 Spotify Bot - Eska Rap 20
 
 A Python bot designed to automatically update a [Spotify playlist](https://open.spotify.com/playlist/64MgIW4xTiI8PJEbpd4PsS?si=e9b81356dce84e66) based on the weekly **Eska Rap 20** chart ranking from the Polish radio station Eska. It scrapes the current chart, finds the corresponding tracks on Spotify, and updates the playlist with the latest top songs.
 
