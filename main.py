@@ -5,7 +5,6 @@ from spotipy.oauth2 import SpotifyOAuth
 from dotenv import load_dotenv
 import os
 import datetime
-import locale
 
 load_dotenv()
 
@@ -14,18 +13,32 @@ SPOTIPY_CLIENT_ID = os.getenv("SPOTIPY_CLIENT_ID")
 SPOTIPY_CLIENT_SECRET = os.getenv("SPOTIPY_CLIENT_SECRET")
 SPOTIPY_REDIRECT_URI = os.getenv("SPOTIPY_REDIRECT_URI")
 SCOPE = "playlist-modify-public"
-try:
-    locale.setlocale(locale.LC_TIME, 'Polish_Poland.1250')
-except locale.Error:
-    locale.setlocale(locale.LC_TIME, 'pl_PL.UTF-8')
+
+polish_months = {
+    "January": "Styczeń",
+    "February": "Luty",
+    "March": "Marzec",
+    "April": "Kwiecień",
+    "May": "Maj",
+    "June": "Czerwiec",
+    "July": "Lipiec",
+    "August": "Sierpień",
+    "September": "Wrzesień",
+    "October": "Październik",
+    "November": "Listopad",
+    "December": "Grudzień"
+}
 now = datetime.datetime.now()
-current_month = now.strftime('%B').capitalize()
+current_month_en = now.strftime('%B').capitalize()
+current_month = polish_months[current_month_en]
 current_year = now.strftime('%Y')
 if now.month == 1:
     previous_month = 12
 else:
     previous_month = now.month - 1
-previous_month = datetime.date(now.year, previous_month, 1).strftime('%B').capitalize()
+previous_month_en = datetime.date(now.year, previous_month, 1).strftime('%B').capitalize()
+previous_month = polish_months[previous_month_en]
+
 PLAYLIST_NAME_OLD = f"Eska Rap 20 | {previous_month} {current_year}"
 PLAYLIST_NAME = f"Eska Rap 20 | {current_month} {current_year}"
 
