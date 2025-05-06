@@ -23,8 +23,8 @@ if now.month == 1:
 else:
     previous_month = now.month - 1
 previous_month = datetime.date(now.year, previous_month, 1).strftime('%B').capitalize()
-PLAYLIST_NAME_OLD = f"Eska Rap 2 | {previous_month} {current_year}"
-PLAYLIST_NAME = f"Eska Rap 2 | {current_month} {current_year}"
+PLAYLIST_NAME_OLD = f"Eska Rap 20 | {previous_month} {current_year}"
+PLAYLIST_NAME = f"Eska Rap 20 | {current_month} {current_year}"
 
 # === SPOTIFY AUTHORIZATION ===
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(
